@@ -1,7 +1,7 @@
 FROM buildpack-deps:jessie
-ADD hello.c /code
+COPY hello.c /code/
 RUN cd /code \
- && gcc hello.c \
- && chmod u+x hello.out
+ && g++ hello.c \
+ && chmod u+x a.out
  
-CMD ["/code/hello.out"]
+CMD ["/code/a.out"]
